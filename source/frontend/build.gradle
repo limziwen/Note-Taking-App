@@ -1,0 +1,41 @@
+
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.6.10'
+    id 'org.openjfx.javafxplugin' version '0.0.12'
+    id 'org.beryx.runtime' version '1.12.7'
+    id 'application'
+}
+
+group = "me.djkhalid"
+version '1.0'
+
+repositories {
+    google()
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.6.10'
+    implementation 'org.junit.jupiter:junit-jupiter:5.8.2'
+    implementation 'com.google.code.gson:gson:2.9.0'
+    implementation "org.xerial:sqlite-jdbc:3.36.0.2"
+    implementation "io.ktor:ktor-client-core:1.6.8"
+    implementation "io.ktor:ktor-client-cio:1.6.8"
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0'
+}
+
+application {
+    mainClassName = 'Main'
+}
+
+javafx {
+    version = "17.0.2"
+    modules = ['javafx.controls', 'javafx.fxml', 'javafx.graphics', 'javafx.media']
+}
+
+tasks.test {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+}

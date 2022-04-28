@@ -1,0 +1,64 @@
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>249</x><y>0</y><w>210</w><h>190</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
+Builder
+--
+
+--
+/+ reset()/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>129</x><y>250</y><w>210</w><h>190</h></coordinates><panel_attributes>NoteBuilder
+--
+- note: Note
+--
++ reset()
++ setTitle(title: String)
++ setTimeModified(time: Time)
++ addModule(module: Module)
++ getResult(): Note
++ attachNote(note: Note)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>239</x><y>180</y><w>140</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>120;10;120;50;10;50;10;70</additional_attributes></element><element><id>UMLClass</id><coordinates><x>128</x><y>475</y><w>210</w><h>190</h></coordinates><panel_attributes>Note
+--
+- title: Title
+- lastModified: Time
+- dateCreated: Time
+- modules: Module[]
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>218</x><y>425</y><w>30</w><h>70</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;50;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>378</x><y>475</y><w>210</w><h>190</h></coordinates><panel_attributes>Module
+--
+- type: String
+- content: String
+--
++ getType(): String
++ getContent(): String
++ setContent() :String
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>328</x><y>568</y><w>70</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;50;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>287</x><y>720</y><w>210</w><h>190</h></coordinates><panel_attributes>NoteDiskAdapter
+--
+
+--
++ readFromFile(filePath: String): Note
++ writeToFile(note: Note)
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>217</x><y>660</y><w>90</w><h>180</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;160;70;160</additional_attributes></element><element><id>UMLClass</id><coordinates><x>317</x><y>930</y><w>170</w><h>40</h></coordinates><panel_attributes>JSON File</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>397</x><y>900</y><w>30</w><h>50</h></coordinates><panel_attributes>lt=-&gt;</panel_attributes><additional_attributes>10;10;10;30</additional_attributes></element><element><id>UMLClass</id><coordinates><x>369</x><y>250</y><w>210</w><h>190</h></coordinates><panel_attributes>ModuleBuilder
+--
+- module: Module
+--
++ reset()
++ setTitle(title: String)
++ setTimeModified(time: Time)
++ addModule(module: Module)
++ getResult(): Note
++ attachNote(note: Note)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>477</x><y>430</y><w>30</w><h>60</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;40;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>347</x><y>180</y><w>130</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;50;110;50;110;70</additional_attributes></element><element><id>UMLClass</id><coordinates><x>628</x><y>245</y><w>210</w><h>190</h></coordinates><panel_attributes>TextModule
+--
+- type: String
+- content: String
+--
++ getType(): String
++ getContent(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>580</x><y>248</y><w>60</w><h>320</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;300;30;300;30;10;40;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>628</x><y>455</y><w>210</w><h>190</h></coordinates><panel_attributes>ImageModule
+--
+- type: String
+- content: String
+--
++ getType(): String
++ getContent(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>580</x><y>538</y><w>70</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;50;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>628</x><y>665</y><w>210</w><h>190</h></coordinates><panel_attributes>VideoModule
+--
+- type: String
+- content: String
+--
++ getType(): String
++ getContent(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>580</x><y>538</y><w>70</w><h>240</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;30;10;30;220;50;220</additional_attributes></element></diagram>

@@ -1,0 +1,18 @@
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>370</x><y>179</y><w>210</w><h>190</h></coordinates><panel_attributes>MangoRepo
+--
+- stores: Store[]
+- quantityMap: Map&lt;Store, Int&gt;
+--
++ getStores(): Store[]
++ addStore(store: Store)
++ removeStore(store: Store)
++ updateQuantity(store: Store, quantity: Int)
++ showStoresWithStock(): Store[]
++ notifyUsers()
++ pollStore(store: Store)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>160</x><y>189</y><w>100</w><h>30</h></coordinates><panel_attributes>Stores with API's</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>250</x><y>199</y><w>140</w><h>30</h></coordinates><panel_attributes>lt=-&gt;&gt;</panel_attributes><additional_attributes>10;10;120;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>110</x><y>249</y><w>150</w><h>30</h></coordinates><panel_attributes>Stores that need polling</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>250</x><y>259</y><w>140</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;-&gt;&gt;</panel_attributes><additional_attributes>10;10;120;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>650</x><y>229</y><w>100</w><h>30</h></coordinates><panel_attributes>User</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>570</x><y>229</y><w>100</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>80;10;10;10</additional_attributes></element><element><id>UMLNote</id><coordinates><x>380</x><y>399</y><w>180</w><h>70</h></coordinates><panel_attributes>updateQuantity(store, quantity)
+  quantityMap[store] = quantity
+  if (quantity &gt; 0)
+    notifyUsers()
+
+bg=blue</panel_attributes><additional_attributes></additional_attributes></element></diagram>

@@ -1,0 +1,10 @@
+.idea
+build/
+.gradle
+**/.DS_Store
+bin/
+*.json
+**/profile.db
+**/profile.db-journal
+**/*.log
+**/out/
