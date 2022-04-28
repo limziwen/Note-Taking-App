@@ -1,11 +1,8 @@
 # CS398
 
-## Resources
-[Miro Board](https://miro.com/app/board/uXjVOXVA7w0=/?invite_link_id=635592687555)
-
 ## Group Members
-- Wen
-- Kouthar
+- Wen 
+- Kouthar 
 - Khalid
 - Greg
 
